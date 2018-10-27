@@ -9,9 +9,9 @@ It should help you
  - **get the job done. Period.** (not teach you go concepts all over the place)
  - be documented .. right.
  - handling script parameters and options using the [cobra](https://github.com/spf13/cobra) lib
- - running cli commands over ssh utilizing your ssh-agent/privkey/password [go-exec](https://github.com/EugenMayer/go-sshclient)
- - running cli commands on the shell with proper stdin/stdout/err handling using the [go-sshclient](https://github.com/EugenMayer/go-exec)
- - transferring files from and to remote server using scp [go-sshclient](https://github.com/EugenMayer/go-sshclient)
+ - running cli commands on the shell with proper stdin/stdout/err handling easily: [go-exec](https://github.com/EugenMayer/go-exec)
+ - running cli commands over ssh utilizing your ssh-agent/privkey/password easily: [go-sshclient](https://github.com/EugenMayer/go-sshclient)
+ - transferring files from and to remote server using scp easily: [go-sshclient](https://github.com/EugenMayer/go-sshclient)
  - help you building in a CI or locally without any dependencies using the `makefile` and `Dockerfile`
  - Include IntelliJ run configuration to run/debug the tasks right away
  
