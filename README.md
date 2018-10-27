@@ -59,4 +59,4 @@ If you feel in need do this for a local manual build
  
 ## TODO
 
-- running commands
+- maybe implement into http://yeoman.io/
