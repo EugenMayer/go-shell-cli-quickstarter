@@ -6,7 +6,7 @@ It should be transparent, you should be able to understand what is happening and
 It should be easy to understand, all implementations in cmd/ are small and specific so you can junk them together and chain them.
 
 It should help you
- - *get the job done. Period.* (not teach you go concepts all over the place)
+ - **get the job done. Period.** (not teach you go concepts all over the place)
  - be documented .. right.
  - handling script parameters and options using the [cobra](https://github.com/spf13/cobra) lib
  - running cli commands over ssh utilizing your ssh-agent/privkey/password [go-exec](https://github.com/EugenMayer/go-sshclient)
@@ -14,6 +14,13 @@ It should help you
  - transferring files from and to remote server using scp [go-sshclient](https://github.com/EugenMayer/go-sshclient)
  - help you building in a CI or locally without any dependencies using the `makefile` and `Dockerfile`
  - Include IntelliJ run configuration to run/debug the tasks right away
+ 
+
+**Why not learning all the deeper concepts?**
+Because even using this top-level without deeper knowledge turns out to be better then every bash script counterpart. 
+ 
+**You don't like golang**
+Still great, pick something else. That's not for you then. No no religious war - thanks.
  
 ## Test it
 
