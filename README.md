@@ -8,9 +8,9 @@ It should be easy to understand, all implementations in cmd/ are small and speci
 It should help you
  - be documented .. right.
  - handling script parameters and options using the [cobra](https://github.com/spf13/cobra) lib
- - running cli commands over ssh utilizing your ssh-agent/privkey/password [sshapi](https://github.com/EugenMayer/go-sshclient)
- - running cli commands on the shell with proper stdin/stdout/err handling using the [sshapi](https://github.com/EugenMayer/go-exec)
- - transferring files from and to remote server using scp [sshapi](https://github.com/EugenMayer/go-sshclient)
+ - running cli commands over ssh utilizing your ssh-agent/privkey/password [go-exec](https://github.com/EugenMayer/go-sshclient)
+ - running cli commands on the shell with proper stdin/stdout/err handling using the [go-sshclient](https://github.com/EugenMayer/go-exec)
+ - transferring files from and to remote server using scp [go-sshclient](https://github.com/EugenMayer/go-sshclient)
  - help you building in a CI or locally without any dependencies using the `makefile` and `Dockerfile`
  - Include IntelliJ run configuration to run/debug the tasks right away
  
