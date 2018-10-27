@@ -6,6 +6,7 @@ It should be transparent, you should be able to understand what is happening and
 It should be easy to understand, all implementations in cmd/ are small and specific so you can junk them together and chain them.
 
 It should help you
+ - be documented .. right.
  - handling script parameters and options using the [cobra](https://github.com/spf13/cobra) lib
  - running cli commands over ssh utilizing your ssh-agent/privkey/password [sshapi](https://github.com/EugenMayer/go-sshclient)
  - running cli commands on the shell with proper stdin/stdout/err handling using the [sshapi](https://github.com/EugenMayer/go-exec)
