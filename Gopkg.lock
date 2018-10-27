@@ -2,12 +2,39 @@
 
 
 [[projects]]
+  branch = "master"
+  digest = "1:02c9e3167bee93b91fdd57f92ed3830c0bc430ff462dabf20d1b9db0e9318115"
+  name = "github.com/eugenmayer/go-exec"
+  packages = ["exec"]
+  pruneopts = "UT"
+  revision = "56b290286649f437b406d99d58d9c1ba1eb6b896"
+
+[[projects]]
+  branch = "master"
+  digest = "1:94ea41b280eca8da96582c340207622f68fc95be3fd10cb3396dc340998e9280"
+  name = "github.com/eugenmayer/go-sshclient"
+  packages = [
+    "scpwrapper",
+    "sshwrapper",
+  ]
+  pruneopts = "UT"
+  revision = "a92b78144f48c002e8f563063289fa78532020b8"
+
+[[projects]]
   digest = "1:870d441fe217b8e689d7949fef6e43efbc787e50f200cb1e70dbca9204a1d6be"
   name = "github.com/inconshreveable/mousetrap"
   packages = ["."]
   pruneopts = "UT"
   revision = "76626ae9c91c4f2a10f34cad8ce83ea42c93bb75"
   version = "v1.0"
+
+[[projects]]
+  branch = "master"
+  digest = "1:400e113a367b511b9b09ca642ee11d9885485a93838526d697033af334a2fdde"
+  name = "github.com/kballard/go-shellquote"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "95032a82bc518f77982ea72343cc1ade730072f0"
 
 [[projects]]
   digest = "1:645cabccbb4fa8aab25a956cbcbdf6a6845ca736b2c64e197ca7cbb9d210b939"
@@ -25,9 +52,38 @@
   revision = "298182f68c66c05229eb03ac171abe6e309ee79a"
   version = "v1.0.3"
 
+[[projects]]
+  branch = "master"
+  digest = "1:9575c378407dd13217c6bbc8d285b7e912724bc4b4288595edceb7a6000ea779"
+  name = "github.com/tmc/scp"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "f7b48647feef3e30991f2ecc16b2b9a977d9a7c3"
+
+[[projects]]
+  branch = "master"
+  digest = "1:1629d30466fabfd508b9aaa0267ab0913dc9f9d4fef2bb8293c1b02bd846ff7e"
+  name = "golang.org/x/crypto"
+  packages = [
+    "curve25519",
+    "ed25519",
+    "ed25519/internal/edwards25519",
+    "internal/chacha20",
+    "internal/subtle",
+    "poly1305",
+    "ssh",
+    "ssh/agent",
+  ]
+  pruneopts = "UT"
+  revision = "e84da0312774c21d64ee2317962ef669b27ffb41"
+
 [solve-meta]
   analyzer-name = "dep"
   analyzer-version = 1
-  input-imports = ["github.com/spf13/cobra"]
+  input-imports = [
+    "github.com/eugenmayer/go-exec/exec",
+    "github.com/eugenmayer/go-sshclient/sshwrapper",
+    "github.com/spf13/cobra",
+  ]
   solver-name = "gps-cdcl"
   solver-version = 1

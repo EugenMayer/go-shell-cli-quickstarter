@@ -18,12 +18,26 @@ It should help you
 I did ship `dist/mycli*` in the repo for convinience reasons for now, so you do neither need to `build` yourself nor us `curl`
 Generally depending on your use, use `mycli-macos` or `mycli-linux`
 
-### SSH test
+### Exec
+
+```bash
+  dist/mycli-macos myexec --cmd="echo hi"
+```
+
+### SSH
 If you want to the the ssh command, just use the local `docker-compose.yml` to start a local `ssh node`
 
 ```
   docker-compose up -d
   dist/mycli-macos myssh --host=localhost --port=2301 --key=test/sshkeys/id_rsa
+```
+
+### SCP
+If you want to the the ssh command, just use the local `docker-compose.yml` to start a local `ssh node`
+
+```
+  docker-compose up -d
+  dist/mycli-macos myscp --host=localhost --port=2301 --key=test/sshkeys/id_rsa --file=test/dummytestfile
 ```
 
 ## Build it yourself
