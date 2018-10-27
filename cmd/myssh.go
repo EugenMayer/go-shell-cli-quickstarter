@@ -1,6 +1,7 @@
 package cmd
 
 import (
+	"fmt"
 	"github.com/eugenmayer/go-sshclient/sshwrapper"
 	"github.com/spf13/cobra"
 	"log"
@@ -22,10 +23,10 @@ var mySshCmd = &cobra.Command{
 
 func init() {
 	mySshCmd.Flags().StringVar(&host, "host", "", "The first option 1")
-	mySshCmd.Flags().StringVar(&user, "user", "root", "Option, the ssh user, defaults to root")
+	mySshCmd.Flags().StringVar(&user, "user", "root", "Optional, the ssh user, defaults to root")
 	mySshCmd.Flags().IntVar(&port, "port", 22, "Optional, your ssh port, defaults to 22")
 	mySshCmd.Flags().StringVar(&privkey, "key", "~/.ssh/id_rsa", "Optional, your private key, defaults to ~/.ssh/id_rsa")
-	mySshCmd.Flags().StringVar(&cmd, "command", "echo hello", "Option, command to run, defaults to 'echo hello'")
+	mySshCmd.Flags().StringVar(&cmd, "command", "echo hello", "Optional, command to run, defaults to 'echo hello'")
 	RootCmd.AddCommand(mySshCmd)
 }
 
@@ -49,4 +50,6 @@ func mySshCommand(_ *cobra.Command, _ []string) {
 		log.Print(stderr)
 		log.Fatal(err)
 	}
+	// else
+	log.Print(fmt.Sprintf("your ssh host '%s' returned:\n %s",sshApi.Host, stdout))
 }

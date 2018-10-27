@@ -1,0 +1,11 @@
+version: "2"
+
+services:
+  sshserver:
+    image: vimagick/openssh
+    hostname: alpine
+    restart: always
+    ports:
+      - "2301:22"
+    volumes:
+      - ./test/sshkeys:/root/.ssh/keys
