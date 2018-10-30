@@ -49,7 +49,7 @@ func myScpCommand(_ *cobra.Command, _ []string) {
 
 	// and back
 	fmt.Printf("Copying file from the remote server back to your host from remote:%s to %s", "/tmp/remotetestfile", "/tmp/fileisback")
-	err = sshApi.CopyToRemote("/tmp/remotetestfile", "/tmp/fileisback")
+	err = sshApi.CopyFromRemote("/tmp/remotetestfile", "/tmp/fileisback")
 	if err != nil {
 		log.Fatal(err)
 	}
