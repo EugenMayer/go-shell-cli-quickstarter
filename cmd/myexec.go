@@ -3,6 +3,7 @@ package cmd
 import (
 	"fmt"
 	"github.com/eugenmayer/go-exec/exec"
+	"github.com/eugenmayer/go-exec/utils"
 	"github.com/spf13/cobra"
 	"log"
 )
@@ -25,6 +26,19 @@ func myExecCommand(_ *cobra.Command, _ []string) {
 		log.Print(stderr)
 		log.Fatal(err)
 	}
+	
 	// else
-	log.Print(fmt.Sprintf("your cmmand returned:\n %s",stdout))
+	log.Print(fmt.Sprintf("your command returned:\n %s",stdout))
+	
+	// question based execution, get confirmaion
+	if utils.ConfirmQuestion("Should i show you the curren time?") {
+		stdout,stderr, err := exec.Run('date', verbose)
+		if err != nil {
+			log.Print(stdout)
+			log.Print(stderr)
+			log.Fatal(err)
+		} 
+		// else
+		log.Print(fmt.Sprintf("date:\n %s",stdout))
+	}
 }
