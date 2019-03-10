@@ -1,7 +1,6 @@
 ci-build:
 	rm -rf dist
 	mkdir -p dist
-	dep ensure -v
 	env CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -tags netgo -o dist/mycli-linux mycli.go
 	env CGO_ENABLED=0 GOOS=darwin GOARCH=amd64 go build -tags netgo -o dist/mycli-macos mycli.go
 	# inject version if it exists
@@ -16,9 +15,6 @@ build-docker:
 	# copy the dist to our local dist folder
 	docker run -v `pwd`/dist:/dist --rm --entrypoint /bin/sh localbuild -c 'cp /go/src/github.com/eugenmayer/go-antibash-boilerplate/dist/mycli* /dist/'
 
-build: init
+build:
 	env CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -tags netgo -o dist/mycli-linux mycli.go
 	env CGO_ENABLED=0 GOOS=darwin GOARCH=amd64 go build -tags netgo -o dist/mycli-macos mycli.go
-
-init:
-	dep ensure

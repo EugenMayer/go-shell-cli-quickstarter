@@ -32,7 +32,7 @@ func myExecCommand(_ *cobra.Command, _ []string) {
 	
 	// question based execution, get confirmaion
 	if utils.ConfirmQuestion("Should i show you the curren time?") {
-		stdout,stderr, err := exec.Run('date', verbose)
+		stdout,stderr, err := exec.Run("date", verbose)
 		if err != nil {
 			log.Print(stdout)
 			log.Print(stderr)
