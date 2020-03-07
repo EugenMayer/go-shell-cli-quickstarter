@@ -64,19 +64,13 @@ If you want to the the ssh command, just use the local `docker-compose.yml` to s
 ### SCP
 If you want to the the ssh command, just use the local `docker-compose.yml` to start a local `ssh node`
 
-```
+```bash
   docker-compose up -d
   dist/mycli-macos myscp --host=localhost --port=2301 --key=test/sshkeys/id_rsa --file=test/dummytestfile
 ```
 
-## Build it yourself
-
-If you have docker, make it easy for yourself, you find the binaries in dist/ locally after that
+## Build this project yourself
 
 ```bash
    make build
 ```
- 
-## TODO
-
-- maybe implement into http://yeoman.io/
