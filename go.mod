@@ -1,4 +1,4 @@
-module github.com/eugenmayer/go-antibash-boilerplate
+module github.com/eugenmayer/go-shell-cli-quickstarter
 
 go 1.14
 
