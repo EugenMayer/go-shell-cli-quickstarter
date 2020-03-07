@@ -1,14 +1,10 @@
 module github.com/eugenmayer/go-antibash-boilerplate
 
-go 1.12
+go 1.14
 
 require (
-	github.com/eugenmayer/go-exec v0.0.0-20190310100556-0c4fc0380741
-	github.com/eugenmayer/go-sshclient v0.0.0-20181027091135-a92b78144f48
-	github.com/inconshreveable/mousetrap v1.0.0
-	github.com/kballard/go-shellquote v0.0.0-20180428030007-95032a82bc51
-	github.com/spf13/cobra v0.0.3
-	github.com/spf13/pflag v1.0.3
-	github.com/tmc/scp v0.0.0-20170824174625-f7b48647feef
-	golang.org/x/crypto v0.0.0-20181025213731-e84da0312774
+	github.com/eugenmayer/go-exec v0.0.0-20190908072206-291c058ecf08
+	github.com/eugenmayer/go-sshclient v0.0.0-20190908070959-1e92f9869e7c
+	github.com/hnakamur/go-scp v0.0.0-20190410043705-badb3bf1aae2 // indirect
+	github.com/spf13/cobra v0.0.6
 )

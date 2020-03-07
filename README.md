@@ -17,14 +17,19 @@ It should help you
  
 
 **Why not learning all the deeper concepts?**
-Because even using this top-level without deeper knowledge turns out to be better then every bash script counterpart. 
+Well you could .. but that stops most people from using golang over bash in the smaller, daily projects.
+So you will learn the deeper parts every time you write something, part by part - but that happens as a side-track, while
+you actually get your job done
  
-**You don't like golang**
-Still great, pick something else. That's not for you then. No no religious war - thanks.
- 
+## Onboarding steps
+
+Assuming you want to write a cli tool called `yourcli`
+
+- rename `mycli.go` to `yourcli.go`
+- copy `README.your.example.md` to `README.md`
 ## Test it
 
-I did ship `dist/mycli*` in the repo for convinience reasons for now, so you do neither need to `build` yourself nor us `curl`
+I did ship `dist/mycli*` in the repo for convenience reasons for now, so you do neither need to `build` yourself nor us `curl`
 Generally depending on your use, use `mycli-macos` or `mycli-linux`
 
 ### Exec
