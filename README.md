@@ -12,7 +12,6 @@ It should help you
  - running cli commands on the shell with proper stdin/stdout/err handling easily: [go-exec](https://github.com/EugenMayer/go-exec)
  - running cli commands over ssh utilizing your ssh-agent/privkey/password easily: [go-sshclient](https://github.com/EugenMayer/go-sshclient)
  - transferring files from and to remote server using scp easily: [go-sshclient](https://github.com/EugenMayer/go-sshclient)
- - help you building in a CI or locally without any dependencies using the `makefile` and `Dockerfile`
  - Include IntelliJ run configuration to run/debug the tasks right away
  
 
@@ -23,10 +22,21 @@ you actually get your job done
  
 ## Onboarding steps
 
-Assuming you want to write a cli tool called `yourcli`
+run this
 
-- rename `mycli.go` to `yourcli.go`
-- copy `README.your.example.md` to `README.md`
+```bash
+./create-my-project.sh mycliname ghusername 
+
+# or with private SCM
+./create-my-project.sh mycliname ghusername ourprivate-scm.tld
+```
+
+Where `cliname` is the name of your cli-program you plan, `ghusername` is your namespace, usually your github username
+and if needed the third param your private SCM domain ( without scheme )
+
+That's read the shell output and your already can start creating.
+
+
 ## Test it
 
 I did ship `dist/mycli*` in the repo for convenience reasons for now, so you do neither need to `build` yourself nor us `curl`
@@ -59,15 +69,7 @@ If you want to the the ssh command, just use the local `docker-compose.yml` to s
 If you have docker, make it easy for yourself, you find the binaries in dist/ locally after that
 
 ```bash
-   make build-docker
-```
-
-If you feel in need do this for a local manual build
-
-```bash
    make build
-   # or of course
-   env CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -tags netgo -o dist/mycli-linux mycli.go
 ```
  
 ## TODO
