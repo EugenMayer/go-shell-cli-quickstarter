@@ -35,11 +35,11 @@ func mySshCommand(_ *cobra.Command, _ []string) {
 		log.Fatal("please set the --host option")
 	}
 
-	sshApi := sshwrapper.SshApi{Host:host,Port:port, User:user}
 	// this could be also
 	// for ssh agent setup: sshApi.DefaultSshAgentSetup()
 	// for password based connection: sshApi.DefaultSshPasswordSetup()
-	err := sshApi.DefaultSshPrivkeySetup(privkey)
+	sshApi, err := sshwrapper.DefaultSshApiSetup(host,port, user, privkey)
+
 	if err != nil {
 		log.Fatal(err)
 	}

@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/eugenmayer/go-antibash-boilerplate/cmd"
+	"github.com/eugenmayer/go-shell-cli-quickstarter/cmd"
 )
 
 func main() {

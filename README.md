@@ -12,19 +12,35 @@ It should help you
  - running cli commands on the shell with proper stdin/stdout/err handling easily: [go-exec](https://github.com/EugenMayer/go-exec)
  - running cli commands over ssh utilizing your ssh-agent/privkey/password easily: [go-sshclient](https://github.com/EugenMayer/go-sshclient)
  - transferring files from and to remote server using scp easily: [go-sshclient](https://github.com/EugenMayer/go-sshclient)
- - help you building in a CI or locally without any dependencies using the `makefile` and `Dockerfile`
  - Include IntelliJ run configuration to run/debug the tasks right away
  
 
 **Why not learning all the deeper concepts?**
-Because even using this top-level without deeper knowledge turns out to be better then every bash script counterpart. 
+Well you could .. but that stops most people from using golang over bash in the smaller, daily projects.
+So you will learn the deeper parts every time you write something, part by part - but that happens as a side-track, while
+you actually get your job done
  
-**You don't like golang**
-Still great, pick something else. That's not for you then. No no religious war - thanks.
- 
+## Onboarding steps
+
+run this
+
+```bash
+./create-my-project.sh --project=mycliname --username=ghusername --strip-ssh
+
+# or with private SCM
+./create-my-project.sh --project=mycliname --username=ghusername  --host=ourprivate-scm.tld --strip-ssh
+```
+
+Where `cliname` is the name of your cli-program you plan, `ghusername` is your namespace, usually your github username
+and if needed the third param your private SCM domain ( without scheme ). `--strip-ssh` means that the examples using
+`ssh` and `scp` are removed including it's dependencies to have you start with a slim, stripped down project
+
+That's read the shell output and your already can start creating.
+
+
 ## Test it
 
-I did ship `dist/mycli*` in the repo for convinience reasons for now, so you do neither need to `build` yourself nor us `curl`
+I did ship `dist/mycli*` in the repo for convenience reasons for now, so you do neither need to `build` yourself nor us `curl`
 Generally depending on your use, use `mycli-macos` or `mycli-linux`
 
 ### Exec
@@ -54,15 +70,7 @@ If you want to the the ssh command, just use the local `docker-compose.yml` to s
 If you have docker, make it easy for yourself, you find the binaries in dist/ locally after that
 
 ```bash
-   make build-docker
-```
-
-If you feel in need do this for a local manual build
-
-```bash
    make build
-   # or of course
-   env CGO_ENABLED=0 GOOS=linux GOARCH=amd64 go build -tags netgo -o dist/mycli-linux mycli.go
 ```
  
 ## TODO

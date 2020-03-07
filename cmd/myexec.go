@@ -3,7 +3,7 @@ package cmd
 import (
 	"fmt"
 	"github.com/eugenmayer/go-exec/exec"
-	"github.com/eugenmayer/go-exec/utils"
+	"github.com/eugenmayer/go-exec/utils/dialog"
 	"github.com/spf13/cobra"
 	"log"
 )
