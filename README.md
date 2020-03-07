@@ -20,9 +20,12 @@ Well you could .. but that stops most people from using golang over bash in the 
 So you will learn the deeper parts every time you write something, part by part - but that happens as a side-track, while
 you actually get your job done
  
-## Onboarding steps
+## Get started
 
-run this
+You can generate a new project for yourself using this boilerplate
+
+This will generate a new shell-project with the name 'mycliname' in `/tmp/mycliname` - you can open the folder using your
+IDE and start developing right away
 
 ```bash
 ./create-my-project.sh --project=mycliname --username=ghusername --strip-ssh
@@ -31,14 +34,15 @@ run this
 ./create-my-project.sh --project=mycliname --username=ghusername  --host=ourprivate-scm.tld --strip-ssh
 ```
 
+You most probably want to `mv` the project from `/tmp` into a folder for your scm prjects.
+
 Where `cliname` is the name of your cli-program you plan, `ghusername` is your namespace, usually your github username
 and if needed the third param your private SCM domain ( without scheme ). `--strip-ssh` means that the examples using
 `ssh` and `scp` are removed including it's dependencies to have you start with a slim, stripped down project
 
 That's read the shell output and your already can start creating.
 
-
-## Test it
+## Included examples
 
 I did ship `dist/mycli*` in the repo for convenience reasons for now, so you do neither need to `build` yourself nor us `curl`
 Generally depending on your use, use `mycli-macos` or `mycli-linux`
