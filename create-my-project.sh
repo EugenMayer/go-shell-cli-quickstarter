@@ -1,5 +1,7 @@
 #!/bin/zsh
 
+# How funny, our own bash script to let you create a project to replace your own :)
+
 set -e
 
 # The name of your cli like "mytool"

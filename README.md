@@ -1,6 +1,6 @@
 ## WAT
 
-This boilerplate should help you to replace a bash script as fast as possible - use it as a copy&paste starter, change the strings and start right away with your business logic.
+This boilerplate / starter should help you to replace a bash script as fast as possible - run `./create-my-project.sh`  and start right away with your business logic.
 
 It should be transparent, you should be able to understand what is happening and go as deep into the matter as you like.
 It should be easy to understand, all implementations in cmd/ are small and specific so you can junk them together and chain them.
