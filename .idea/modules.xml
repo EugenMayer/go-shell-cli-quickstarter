@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/go-antibash-boilerplate.iml" filepath="$PROJECT_DIR$/go-antibash-boilerplate.iml" />
+      <module fileurl="file://$PROJECT_DIR$/go-shell-cli-quickstarter.iml" filepath="$PROJECT_DIR$/go-shell-cli-quickstarter.iml" />
     </modules>
   </component>
 </project>

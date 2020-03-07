@@ -25,14 +25,15 @@ you actually get your job done
 run this
 
 ```bash
-./create-my-project.sh mycliname ghusername 
+./create-my-project.sh --project=mycliname --username=ghusername --strip-ssh
 
 # or with private SCM
-./create-my-project.sh mycliname ghusername ourprivate-scm.tld
+./create-my-project.sh --project=mycliname --username=ghusername  --host=ourprivate-scm.tld --strip-ssh
 ```
 
 Where `cliname` is the name of your cli-program you plan, `ghusername` is your namespace, usually your github username
-and if needed the third param your private SCM domain ( without scheme )
+and if needed the third param your private SCM domain ( without scheme ). `--strip-ssh` means that the examples using
+`ssh` and `scp` are removed including it's dependencies to have you start with a slim, stripped down project
 
 That's read the shell output and your already can start creating.
 

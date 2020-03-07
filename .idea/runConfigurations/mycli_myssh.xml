@@ -1,6 +1,6 @@
 <component name="ProjectRunConfigurationManager">
   <configuration default="false" name="mycli myssh" type="GoApplicationRunConfiguration" factoryName="Go Application">
-    <module name="go-antibash-boilerplate" />
+    <module name="go-shell-cli-quickstarter" />
     <working_directory value="$PROJECT_DIR$" />
     <parameters value="myssh --host=localhost --port=2301 --key=test/sshkeys/id_rsa" />
     <kind value="FILE" />
