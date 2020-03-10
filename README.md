@@ -36,11 +36,14 @@ IDE and start developing right away
 
 You most probably want to `mv` the project from `/tmp` into a folder for your scm prjects.
 
-Where `cliname` is the name of your cli-program you plan, `ghusername` is your namespace, usually your github username
-and if needed the third param your private SCM domain ( without scheme ). `--strip-ssh` means that the examples using
-`ssh` and `scp` are removed including it's dependencies to have you start with a slim, stripped down project
+### Parameters
 
-That's read the shell output and your already can start creating.
+- `--project` - The name of your CLI program that you are planning (`mycliname` in the examples).
+- `--username` - Your namespace, usually your GitHub username (`ghusername` in the examples).
+- `--strip-ssh` (optional) - Will remove the `ssh` and `scp` examples from the starter, including all of it's dependencies for a slim and stripped down project.
+- `--host` (optional) - Your private VCS domain (without scheme).
+
+That's it, read the shell output and you are ready and set to start creating.
 
 ## Included examples
 
