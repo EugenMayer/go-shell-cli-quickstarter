@@ -8,6 +8,10 @@ import (
 	"log"
 )
 
+var (
+	shellCmd 	string
+)
+
 var myExecCmd = &cobra.Command{
 	Use:   "myexec",
 	Short: "connect to an ssh host and run hello world",
@@ -15,12 +19,12 @@ var myExecCmd = &cobra.Command{
 }
 
 func init() {
-	myExecCmd.Flags().StringVar(&cmd, "command", "echo hello", "Optional, the command to exec locally defaults to 'echo hello'")
+	myExecCmd.Flags().StringVar(&shellCmd, "command", "echo hello", "Optional, the command to exec locally defaults to 'echo hello'")
 	RootCmd.AddCommand(myExecCmd)
 }
 
 func myExecCommand(_ *cobra.Command, _ []string) {
-	stdout,stderr, err := exec.Run(cmd, verbose)
+	stdout,stderr, err := exec.Run(shellCmd, verbose)
 	if err != nil {
 		log.Print(stdout)
 		log.Print(stderr)
